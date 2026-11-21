@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">FaunaLens</string>
+
+    <!-- Navigation -->
+    <string name="nav_scan">Scan</string>
+    <string name="nav_field_log">Field Log</string>
+    <string name="nav_atlas">Bio-Atlas</string>
+
+    <!-- AI / Firebase Notice -->
+    <string name="sample_mode_badge">Sample Mode</string>
+    <string name="ai_firebase_notice_title">Sample Species Recognition Active</string>
+    <string name="ai_firebase_notice_body">Live AI species identification and custom Q&amp;A require Firebase AI Logic. Results below use curated sample species data.</string>
+
+    <!-- Scanner Screen -->
+    <string name="scanner_title">FaunaLens</string>
+    <string name="scanner_subtitle">Point camera at any animal species</string>
+    <string name="scanner_permission_title">Camera Access Needed</string>
+    <string name="scanner_permission_body">Grant camera permission to scan wildlife live, or pick any animal photo from your gallery.</string>
+    <string name="action_enable_camera">Enable Camera</string>
+    <string name="action_pick_photo">Gallery</string>
+    <string name="action_sample_scan">Try Sample Scan</string>
+    <string name="action_capture_scan">Scan Species</string>
+    <string name="action_toggle_flash">Toggle Flash</string>
+    <string name="action_switch_camera">Switch Camera</string>
+    <string name="scanner_analyzing_title">Analyzing Specimen…</string>
+    <string name="scanner_analyzing_subtitle">Inspecting morphology, coloration, and taxonomic markers</string>
+    <string name="scanner_camera_unavailable">Camera preview unavailable on this device. Use Gallery or Try Sample Scan below.</string>
+
+    <!-- Field Log Screen -->
+    <string name="field_log_title">Field Log</string>
+    <string name="field_log_subtitle">Your scanned &amp; saved wildlife encounters</string>
+    <string name="field_log_search_hint">Search species, scientific name, habitat…</string>
+    <string name="field_log_empty_title">No Sightings Logged Yet</string>
+    <string name="field_log_empty_body">Use the camera scanner or pick an animal photo to build your personal wildlife field journal.</string>
+    <string name="action_start_scanning">Open Scanner</string>
+    <string name="action_delete_scan">Delete sighting</string>
+
+    <!-- Bio-Atlas Screen -->
+    <string name="atlas_title">Bio-Atlas</string>
+    <string name="atlas_subtitle">Explore animal classes &amp; reference dossiers</string>
+    <string name="atlas_search_hint">Filter animal encyclopedia…</string>
+    <string name="atlas_hero_title">Animal Kingdom Reference</string>
+    <string name="atlas_hero_body">Browse taxonomy, habitat ranges, diets, and conservation status across mammals, birds, reptiles, amphibians, fish, and arthropods.</string>
+
+    <!-- Species Detail Screen -->
+    <string name="action_back">Back</string>
+    <string name="detail_section_taxonomy">Taxonomy Classification</string>
+    <string name="detail_section_traits">Physical Traits &amp; Field Marks</string>
+    <string name="detail_section_habitat">Habitat &amp; Geographic Range</string>
+    <string name="detail_section_diet">Diet &amp; Ecological Role</string>
+    <string name="detail_section_behavior">Behavior &amp; Life Cycle</string>
+    <string name="detail_section_safety">Safety &amp; Human Interaction</string>
+    <string name="detail_section_fun_facts">Field Notes &amp; Notable Facts</string>
+    <string name="detail_qa_title">Species Q&amp;A</string>
+    <string name="detail_qa_hint">Ask anything about this species…</string>
+    <string name="action_ask_question">Ask</string>
+    <string name="label_conservation">Conservation</string>
+    <string name="label_size">Size &amp; Mass</string>
+    <string name="label_lifespan">Lifespan</string>
+    <string name="label_activity">Activity</string>
+    <string name="label_confidence">Match</string>
+</resources>

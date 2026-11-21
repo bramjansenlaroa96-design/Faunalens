@@ -1,0 +1,6 @@
+{
+  "name": "FaunaLens",
+  "description": "Scan and identify any animal species using your device camera with detailed biological, habitat, diet, and conservation insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
