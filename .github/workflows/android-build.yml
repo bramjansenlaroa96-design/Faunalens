@@ -21,23 +21,25 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Generate debug.keystore
+        run: |
+          keytool -genkey -v \
+            -keystore debug.keystore \
+            -storepass android \
+            -alias androiddebugkey \
+            -keypass android \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -dname "CN=Android Debug,O=Android,C=US"
+
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
 
       - name: Build Debug APK
-        id: build_apk
-        run: |
-          set -o pipefail
-          gradle assembleDebug --console=plain 2>&1 | tee build.log
-          EXIT_CODE=${PIPESTATUS[0]}
-          if [ $EXIT_CODE -ne 0 ]; then
-            echo "=== LAST NON-STACKTRACE LINES ==="
-            grep -v -E "^[[:space:]]+at |^\* Try:|^\* Get more help|^\* Exception is:" build.log | tail -n 60 || true
-            exit $EXIT_CODE
-          fi
+        run: gradle assembleDebug
 
       - name: Upload Debug APK
-        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
