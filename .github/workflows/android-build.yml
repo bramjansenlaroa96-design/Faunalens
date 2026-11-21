@@ -28,11 +28,11 @@ jobs:
         id: build_apk
         run: |
           set -o pipefail
-          gradle assembleDebug 2>&1 | tee build.log
+          gradle assembleDebug --console=plain 2>&1 | tee build.log
           EXIT_CODE=${PIPESTATUS[0]}
           if [ $EXIT_CODE -ne 0 ]; then
-            echo "=== FAILURE DETAILS ==="
-            grep -n -C 5 -E "Execution failed for task|FAILURE:|Caused by:|> Task .*(FAILED)|error:|Exception:" build.log | tail -n 60 || true
+            echo "=== LAST NON-STACKTRACE LINES ==="
+            grep -v -E "^[[:space:]]+at |^\* Try:|^\* Get more help|^\* Exception is:" build.log | tail -n 60 || true
             exit $EXIT_CODE
           fi
 
